@@ -7,9 +7,9 @@ import BackToTop from '@/components/BackToTop'
 // import Particles from '@/components/Particles'
 
 export const metadata: Metadata = {
-  creator: 'yucihent',
-  title: '赫子子空间',
-  description: '赫子子的博客'
+  creator: 'sweetsunnyflower',
+  title: '高兵兵空间',
+  description: '高兵兵的博客'
 }
 
 const NoSSRThemeProvider = dynamic(() => import('@/components/ThemeProvider'), {

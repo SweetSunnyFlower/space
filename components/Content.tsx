@@ -9,7 +9,7 @@ import {
   LIST,
   LS,
   POSTS,
-  // PROJECTS,
+  PROJECTS,
   type CommandsType
 } from '@/constants'
 import { CommandContext } from './CommandProvider'
@@ -28,9 +28,9 @@ export default function CommandContent(props: Record<string, any>) {
   } else if (cmd === POSTS) {
     return PostsContent()
   }
-  // else if (cmd === PROJECTS) {
-  //   return ProjectsContent(args)
-  // }
+  else if (cmd === PROJECTS) {
+    return ProjectsContent(args)
+  }
   else if (cmd === ABOUT) {
     return AboutContent(args)
   }
@@ -161,6 +161,21 @@ function PostsContent() {
 }
 
 // projects cmd content
-// function ProjectsContent(props: Record<string, any>) {
-//   return <h2>{props.content}</h2>
-// }
+function ProjectsContent(props: Record<string, any>) {
+  const { projects } = useContext(CommandContext)
+  return (
+    <ul>
+      {projects.map((project) => (
+        <li key={project.slug} className="mb-3 list-disc list-inside">
+          <Link
+            href={`/projects/${project.slug}`}
+            className="text-sky-500"
+            target="_blank"
+          >
+            {project.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}

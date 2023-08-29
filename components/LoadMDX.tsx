@@ -3,11 +3,11 @@
 import dynamic from 'next/dynamic'
 import { type ListType } from 'lib/file'
 
-type MDXSourceType = 'posts' | 'weekly'
+type MDXSourceType = 'posts' | 'weekly' | 'projects'
 type OmitOptionType = 'description' | 'date'
 
 export type LoadMDXPropsType<
-  T extends MDXSourceType = 'posts',
+  T extends MDXSourceType = 'posts' | 'projects',
   P extends OmitOptionType = 'description'
 > = Omit<ListType, P> & {
   source?: T

@@ -2,7 +2,7 @@ module.exports = {
   git: {
     tag: true,
     requireBranch: 'main',
-    commitMessage: 'release: yucihent.space ${version}'
+    commitMessage: 'release: sweetsunnyflower.space ${version}'
   },
   npm: {
     publish: false
