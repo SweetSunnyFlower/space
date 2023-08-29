@@ -27,11 +27,9 @@ export default function CommandContent(props: Record<string, any>) {
     return ListContent(args)
   } else if (cmd === POSTS) {
     return PostsContent()
-  }
-  else if (cmd === PROJECTS) {
+  } else if (cmd === PROJECTS) {
     return ProjectsContent(args)
-  }
-  else if (cmd === ABOUT) {
+  } else if (cmd === ABOUT) {
     return AboutContent(args)
   }
   return (

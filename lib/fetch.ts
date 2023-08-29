@@ -21,7 +21,9 @@ export async function fetchPostList<T extends boolean = true>(
 ): Promise<FetchPostReturnType<T>> {
   // 申明一个随机字符串
   const random = Math.random().toString(36).substr(2)
-  const res = await fetch(`${base}/${withMeta ? 'postmetas' : 'posts'}?random=${random}`)
+  const res = await fetch(
+    `${base}/${withMeta ? 'postmetas' : 'posts'}?random=${random}`
+  )
   return res.json()
 }
 
@@ -45,6 +47,8 @@ export async function fetchProjectList<T extends boolean = true>(
 ): Promise<FetchProjectReturnType<T>> {
   // 申明一个随机字符串
   const random = Math.random().toString(36).substr(2)
-  const res = await fetch(`${base}/${withMeta ? 'projectmetas' : 'projects'}?random=${random}`)
+  const res = await fetch(
+    `${base}/${withMeta ? 'projectmetas' : 'projects'}?random=${random}`
+  )
   return res.json()
 }

@@ -24,8 +24,7 @@ export default function ProjectDetail({
   params: { slug }
 }: {
   params: { slug: string }
-  }) {
-
+}) {
   const { title = '', date = '' } = getTitleAndDateBySlug(slug)
 
   const source = 'projects'

@@ -5,14 +5,14 @@ import { fetchPostList, fetchProjectList } from 'lib/fetch'
 import { type ListType } from 'lib/file'
 
 type ProviderValueType = {
-  posts: ListType[],
-  projects:  ListType[],
+  posts: ListType[]
+  projects: ListType[]
   [key: string]: any
 }
 
 export const CommandContext = createContext<ProviderValueType>({
   posts: [],
-  projects: [],
+  projects: []
 })
 
 export default function PostProvider({
@@ -24,7 +24,7 @@ export default function PostProvider({
 }) {
   const [providerValue, setProviderValue] = useState<ProviderValueType>({
     posts: [],
-    projects: [],
+    projects: []
   })
 
   const fetch = async () => {

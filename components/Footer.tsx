@@ -3,7 +3,6 @@ import Icon from './Icon'
 export default function Footer() {
   return (
     <footer className="text-sm mt-20 flex items-center text-gray-500 dark:text-slate-400">
-
       <a
         className="ml-3"
         href="https://github.com/sweetsunnyflower/space"
@@ -27,6 +26,5 @@ export default function Footer() {
         <Icon name="github" width={20} height={20} />
       </a>
     </footer>
-
   )
 }
